@@ -6,6 +6,8 @@ import { Ionicons } from '@expo/vector-icons';
 import type { RootTabParamList, SessionsStackParamList, SpotsStackParamList } from './types';
 import { SessionListScreen } from '../screens/sessions/SessionListScreen';
 import { ActiveSessionScreen } from '../screens/sessions/ActiveSessionScreen';
+import { LogVisitScreen } from '../screens/sessions/LogVisitScreen';
+import { LogCatchesScreen } from '../screens/sessions/LogCatchesScreen';
 import { SpotListScreen } from '../screens/spots/SpotListScreen';
 import { AddSpotScreen } from '../screens/spots/AddSpotScreen';
 import { RecommendationsScreen } from '../screens/recommendations/RecommendationsScreen';
@@ -26,6 +28,16 @@ function SessionsNavigator() {
         name="ActiveSession"
         component={ActiveSessionScreen}
         options={{ title: 'Active Session' }}
+      />
+      <SessionsStack.Screen
+        name="LogVisit"
+        component={LogVisitScreen}
+        options={{ title: 'Log Location Visit' }}
+      />
+      <SessionsStack.Screen
+        name="LogCatches"
+        component={LogCatchesScreen}
+        options={{ title: 'Log Catches' }}
       />
     </SessionsStack.Navigator>
   );
